@@ -9,11 +9,11 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: npm install
-            - run: npm ci
+              run: npm ci
             - name: run the unit tests
-            - run: npm test
+              run: npm test
             - name: Build and push the image
-            - run: |
+              run: |
                 docker login --username harshitgupta1998 --password ${{secrets.ACCESS_TOKEN}} ghcr.io
                 docker build -t ghcr.io/harshitgupta1998/arithmetic-service:latest --file Dockerfile .  
                 docker push ghcr.io/harshitgupta1998/arithmetic-service:latest
