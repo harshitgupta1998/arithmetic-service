@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const {add}=require('./arthimetica');
+//const {add}=require('./arthimetica');
 const app = express();
 
 app.use(cors()) // accross origin resourse sharing - basically we accept requests from all domains
